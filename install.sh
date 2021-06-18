@@ -36,10 +36,6 @@ mkdir $HOME/Development/Personal
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-# Removes .hyper.js from $HOME (if it exists) and symlinks the .hyper.js file from the .dotfiles
-rm -rf $HOME/.hyper.js
-ln -s $HOME/.dotfiles/.zshyper.jshrc $HOME/.hyper.js
-
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
