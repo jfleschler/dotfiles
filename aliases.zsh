@@ -1,54 +1,86 @@
 # Shortcuts
-alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
-alias reloadshell="source $HOME/.zshrc"
-alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
-alias c="clear"
+alias c="code .";
+alias ll="ls -1a";
+alias ls='ls -G';
+alias ..="cd ../";
+alias ..l="cd ../ && ll";
+alias pg="echo 'Pinging Google' && ping www.google.com";
+alias de="cd ~/Desktop";
+alias dd="cd ~/code";
+alias d="cd ~/code && cd "
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+
+## other aliases
+alias zshrc='code ~/.zshrc'
+alias update="source ~/.zshrc"
+alias topten="history | commands | sort -rn | head"
+alias myip="curl http://ipecho.net/plain; echo"
+alias usage='du -h -d1'
+alias sshdir="cd ~/.ssh"
+alias runp="lsof -i "
+alias md="mkdir "
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
-alias sites="cd $HOME/Sites"
-alias lara="sites && cd laravel/"
-alias docs="lara && cd docs/"
+alias dev="cd $HOME/code"
 
-# Laravel
-alias a="php artisan"
-alias fresh="php artisan migrate:fresh --seed"
-alias seed="php artisan db:seed"
+# npm aliases
+alias ni="npm install";
+alias nrs="npm run start -s --";
+alias nrb="npm run build -s --";
+alias nrd="npm run dev -s --";
+alias nrt="npm run test -s --";
+alias nrtw="npm run test:watch -s --";
+alias nrv="npm run validate -s --";
+alias rmn="rm -rf node_modules";
+alias flush-npm="rm -rf node_modules && npm i && echo NPM is done";
 
-# PHP
-alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias php74="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php --rm registry.gitlab.com/grahamcampbell/php:7.4"
-alias php8="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php --rm registry.gitlab.com/grahamcampbell/php:8.0"
-alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
-
-# JS
-alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
-alias watch="npm run watch"
+## yarn aliases
+alias yar="yarn run"; # lists all the scripts we have available
+alias yab="yarn build"; # build dist directory for each package
+alias yal="yarn lint:fix"; # format source and auto-fix eslint issues
+alias yac="yarn commit"; # open a Q&A prompt to help construct valid commit messages
+alias yas="yarn start";
+alias yasb="yarn storybook:start"; # start storybook
+alias yat="yarn test"; # run the unit tests*
+alias yatw="yarn test:watch"; #run the unit tests for files changed on save
 
 # Docker
-alias docker-composer="docker-compose"
-
-# SQL Server
-alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=LaravelWow1986! -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
+alias dockerdown='docker-compose down'
+alias dockerstop='docker-compose stop'
+alias dockerrestart='docker-compose restart'
+alias dockerps='docker-compose ps'
+alias dockerup='docker-compose up -d && ./check-services-status.sh'
+alias dockerrm='docker-compose rm --all'
+alias dockerpp='docker-compose pull; docker image prune -f;'
+alias docker-web='docker-compose up -d commerceweb search indexer'
+alias docker-admin='docker-compose up -d adminweb asset catalog'
+alias docker-webdev='docker-compose up -d --scale commerceweb=0 commerceweb search indexer'
+alias docker-admindev='docker-compose up -d --scale adminweb=0 adminweb asset catalog'
 
 # Git
-alias gst="git status"
-alias gb="git branch"
-alias gc="git checkout"
-alias gl="git log --oneline --decorate --color"
-alias amend="git add . && git commit --amend --no-edit"
-alias commit="git add . && git commit -m"
-alias diff="git diff"
-alias force="git push --force"
-alias nuke="git clean -df && git reset --hard"
-alias pop="git stash pop"
-alias pull="git pull"
-alias push="git push"
-alias resolve="git add . && git commit --no-edit"
-alias stash="git stash -u"
-alias unstage="git restore --staged ."
-alias wip="commit wip"
+function gc { git commit -m "$@"; }
+alias gcm="git checkout master";
+alias gs="git status";
+alias gpull="git pull";
+alias gf="git fetch";
+alias gfa="git fetch --all";
+alias gf="git fetch origin";
+alias gpush="git push";
+alias gd="git diff";
+alias ga="git add .";
+alias gb="git branch";
+alias gbr="git branch remote"
+alias gfr="git remote update"
+alias gbn="git checkout -B "
+alias grf="git reflog";
+alias grh="git reset HEAD~" # last commit
+alias gac="git add . && git commit -a -m "
+alias gsu="git gpush --set-upstream origin "
+alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+

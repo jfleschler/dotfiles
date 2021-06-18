@@ -19,25 +19,15 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-# Set default MySQL root password and auth type
-mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
+# Create a Development directory
+mkdir $HOME/Development
 
-# Install PHP extensions with PECL
-pecl install imagick memcached redis swoole
+# Create a Screenshots directory
+mkdir $HOME/Documents/Screenshots
 
-# Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/valet beyondcode/expose
-
-# Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
-
-# Create a Sites directory
-mkdir $HOME/Sites
-
-# Create sites subdirectories
-mkdir $HOME/Sites/blade-ui-kit
-mkdir $HOME/Sites/eventsauce
-mkdir $HOME/Sites/laravel
+# Create Development subdirectories
+mkdir $HOME/Development/BroadleafCommerce
+mkdir $HOME/Development/Personal
 
 # Clone Github repositories
 ./clone.sh
@@ -45,6 +35,10 @@ mkdir $HOME/Sites/laravel
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+# Removes .hyper.js from $HOME (if it exists) and symlinks the .hyper.js file from the .dotfiles
+rm -rf $HOME/.hyper.js
+ln -s $HOME/.dotfiles/.zshyper.jshrc $HOME/.hyper.js
 
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
