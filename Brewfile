@@ -12,6 +12,7 @@ brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
 brew 'gh'
 brew 'git'
+brew 'svn'
 brew 'gnupg'
 brew 'grep'
 brew 'httpie'
@@ -36,7 +37,6 @@ brew 'docker-credential-helper'
 brew 'starship'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
-brew 'java8'
 
 # Apps
 cask 'hyper'
@@ -72,13 +72,11 @@ cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 cask 'font-fira-code'
+cask 'font-jetbrains-mono'
 
 # Mac App Store
-mas 'Byword', id: 420212497
-mas 'Giphy Capture', id: 668208984
-mas 'Slack', id: 803453959
 mas 'Xcode', id: 497799835
 mas 'Harvest', id: 506189836
 mas 'Pixelmator', id: 407963104
 mas 'The Unarchiver', id: 425424353
-mas 'com.linebreak.CloudAppMacOSX', id: 417602904
+mas 'CloudApp', id: 417602904
