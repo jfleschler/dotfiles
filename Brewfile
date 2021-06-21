@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
+tap 'AdoptOpenJDK/openjdk'
 
 # Binaries
 brew 'awscli'
@@ -37,6 +38,7 @@ brew 'docker-credential-helper'
 brew 'starship'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
+brew 'adoptopenjdk11'
 
 # Apps
 cask 'hyper'
