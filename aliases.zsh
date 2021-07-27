@@ -27,7 +27,7 @@ alias ...='cd ../..'
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
-alias dev="cd $HOME/code"
+alias dev="cd $HOME/Development"
 
 # npm aliases
 alias ni="npm install";

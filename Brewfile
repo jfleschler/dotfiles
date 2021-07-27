@@ -39,6 +39,7 @@ brew 'starship'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 brew 'adoptopenjdk11'
+brew 'adoptopenjdk8'
 
 # Apps
 cask 'hyper'
@@ -55,11 +56,11 @@ cask 'insomnia'
 cask 'slack'
 cask 'sublime-text'
 cask 'tableplus'
-cask 'tuple'
 cask 'intellij-idea'
 cask 'visual-studio-code'
 cask 'zoom'
 cask 'rocket'
+cask 'viscosity'
 
 # Quicklook
 cask 'qlmarkdown'

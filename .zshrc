@@ -117,4 +117,5 @@ export NVM_DIR="$HOME/.nvm"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # starship init
+export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
