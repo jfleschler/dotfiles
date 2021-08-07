@@ -61,6 +61,7 @@ cask 'visual-studio-code'
 cask 'zoom'
 cask 'rocket'
 cask 'viscosity'
+cask 'sourcetree'
 
 # Quicklook
 cask 'qlmarkdown'
