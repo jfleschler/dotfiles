@@ -64,8 +64,8 @@ cask 'viscosity'
 cask 'sourcetree'
 
 # Quicklook
-cask 'qlmarkdown'
-cask 'quicklook-json'
+# cask 'qlmarkdown'
+# cask 'quicklook-json'
 
 # Fonts
 cask 'font-lato'
