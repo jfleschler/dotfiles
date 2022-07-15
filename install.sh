@@ -19,6 +19,10 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Install python2 as it's needed for yarn
+pyenv install 2.7.18
+pyenv global 2.7.18
+
 # Create a Development directory
 mkdir $HOME/Development
 
