@@ -40,6 +40,7 @@ brew 'svn'
 brew 'openjdk'
 brew 'openjdk@11'
 brew 'openjdk@8'
+brew 'pyenv'
 
 # Apps
 cask 'hyper'
