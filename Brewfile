@@ -56,6 +56,7 @@ cask 'visual-studio-code'
 cask 'zoom'
 cask 'viscosity'
 cask 'sourcetree'
+cask 'drovio'
 
 # Fonts
 cask 'font-lato'
