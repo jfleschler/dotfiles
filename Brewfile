@@ -59,6 +59,8 @@ cask 'viscosity'
 cask 'sourcetree'
 cask 'drovio'
 
+cask 'superslicer'
+
 # Fonts
 cask 'font-lato'
 cask 'font-open-sans'

@@ -96,7 +96,7 @@ export LANG=en_US.UTF-8
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-  
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -119,3 +119,5 @@ export NVM_DIR="$HOME/.nvm"
 # starship init
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
