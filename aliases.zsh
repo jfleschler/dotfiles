@@ -51,6 +51,7 @@ alias yat="yarn test"; # run the unit tests*
 alias yatw="yarn test:watch"; #run the unit tests for files changed on save
 
 # Docker
+alias use-colima='docker context use colima && colima start'
 alias dockerdown='docker-compose down'
 alias dockerstop='docker-compose stop'
 alias dockerrestart='docker-compose restart'
@@ -62,6 +63,8 @@ alias docker-web='docker-compose up -d commerceweb search indexer'
 alias docker-admin='docker-compose up -d adminweb asset catalog'
 alias docker-webdev='docker-compose up -d --scale commerceweb=0 commerceweb search indexer'
 alias docker-admindev='docker-compose up -d --scale adminweb=0 adminweb asset catalog'
+
+alias ci='mvn clean install -U -pl auth,browse,cart,processing,supporting'
 
 # Git
 function gc { git commit -m "$@"; }
