@@ -45,3 +45,8 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source .macos
+
+# Set up colima stuff
+colima start --cpu 4 --memory 16 --disk 60 --arch aarch64
+colima start --cpu 4 --memory 16 --disk 60 --arch x86_64 --profile x86
+docker context use colima
